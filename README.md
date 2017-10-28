@@ -73,11 +73,11 @@ Point your browser to your CodeIgniter's installation. You should be asked to au
 
 ## Authors
 
-* **[Pavel Espinal]**(http://pavelespinal.com)
+* **[Pavel Espinal](http://pavelespinal.com)**
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
