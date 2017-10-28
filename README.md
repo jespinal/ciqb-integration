@@ -71,12 +71,6 @@ $autoload['libraries'] = array('session');
 
 Point your browser to your CodeIgniter's installation. You should be asked to authenticate yourself to Quickbooks online. After authenticating, you should see a success message below the "Connect" button.
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
 ## Authors
 
 * **[Pavel Espinal]**(http://pavelespinal.com)
