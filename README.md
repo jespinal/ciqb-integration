@@ -14,7 +14,7 @@ The scenario/use case is the following:
 
 For the sake of simplicity, this example asumes that you:
 
-* ...are using a fresh copy of CodeIgniter +=3.6.
+* ...are using a fresh copy of CodeIgniter >=3.1.6.
 * ...know how to use Composer and have it configured on your workstation.
 * ...have correctly configured your config.php file to point your CodeIgniter's installation directory.
 
