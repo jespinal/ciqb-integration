@@ -24,7 +24,11 @@ class Qb_oauth_endpoint extends CI_Controller {
      */
     public function index()
 	{
-
+        // Note: this controller is likely to be accessed through a popup window,
+        // so I tried to keep it simple. Once the authorization is copleted, you'll
+        // have the access token in session, hence, you can redirect to another controller
+        // where you want to do some magic :)
+        
         /* @var $loProvider \League\OAuth2\Client\Provider\GenericProvider */
         $loProvider = new \League\OAuth2\Client\Provider\GenericProvider([
             'clientId'              => $this->config->item('client_id'),        // Your Intuit App's details provides you this info
@@ -54,11 +58,10 @@ class Qb_oauth_endpoint extends CI_Controller {
             // Redirect the user to the authorization URL.
             header('Location: ' . $lsAuthorizationUrl);
             exit;
-
-        // Check given state against previously stored one to mitigate CSRF attack
         } 
         else
         {
+            // Check given state against previously stored one to mitigate CSRF attack
             if(strcmp($this->session->userdata('oauth2state'), $this->input->get('state')) != 0){
                 throw new Exception("The state is not correct from Intuit Server. Consider your app is hacked.");
             }
@@ -80,7 +83,13 @@ class Qb_oauth_endpoint extends CI_Controller {
                 exit;
             }
 
-            // Storing access token in session
+            // Storing access token and some other important data in session.
+            // Pay attention to each value, as we will them later and it can get
+            // confuse if you don't know where they came from later.
+            // 
+            // For more elaborated approaches you might want to save these into 
+            // the DB and then have a Cron job validating the token periodically
+            // (E.g. using the expiration date, etc.)
             $this->session->set_userdata([
                                     'access_token'      => $loAccessToken->getToken(),
                                     'refresh_token'     => $loAccessToken->getRefreshToken(),
