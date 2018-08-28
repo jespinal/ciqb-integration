@@ -75,12 +75,13 @@ $autoload['config'] = array('quickbooks');
 
 5. Copy the file _application/controllers/Qb_oauth_endpoint.php_ file into your controllers/ directory.
 
-6. Copy the file _application/views/welcome_message.php_ into your views/ directory.
+6. Copy the file _application/controllers/Qb_tests.php_ into your controllers/ directory.
 
-This is just a modified version of the native _welcome_message.php_ that comes with CodeIgniter. You'll notice a tiny modification where some Javascript lines were added in order to provide an example of the [authorization workflow](https://developer.intuit.com/docs/0100_quickbooks_online/0100_essentials/000500_authentication_and_authorization/0005_your_app_user_experience).
+7. Copy the file _application/views/welcome_message.php_ into your views/ directory (this is just a modified version of the native _welcome_message.php_ that comes with CodeIgniter. You'll notice a tiny modification where some Javascript lines were added in order to provide an example of the [authorization workflow](https://developer.intuit.com/docs/0100_quickbooks_online/0100_essentials/000500_authentication_and_authorization/0005_your_app_user_experience)).
 
-7. Copy the file _application/helpers/security_helper.php_ into your helpers/ directory.
- 
+8. Copy the file _application/views/qb_tests.php_ into your views/ directory.
+
+9. Copy the file _application/helpers/security_helper.php_ into your helpers/ directory.
 
 ## Running the tests
 
@@ -88,7 +89,9 @@ Point your browser to your CodeIgniter's installation (E.g. http://localhost/ciq
 
 Click on the button. It should open a popup window asking authenticate yourself to Quickbooks, and authorizing the application (connecting it) afterwards.
 
-Once the application is connected, the popup closes and the page is refreshed showing a "Successfully connectd..." message.
+Once the application is connected, the popup closes and the page is refreshed showing a "Successfully connected..." message.
+
+You can now point your browser to the Qb_tests controller (E.g. http://localhost/ciqb-integrator/index.php/qb_tests) and look some examples in action.
 
 ## Authors
 
