@@ -11,9 +11,9 @@
 		"source": "https://github.com/bcit-ci/CodeIgniter"
 	},
 	"require": {
-            "php": ">=5.3.7",
-            "quickbooks/v3-php-sdk": ">=4.0.1",
-            "league/oauth2-client": "^2.3"
+		"php": ">=5.3.7",
+		"league/oauth2-client": "^2.4",
+		"quickbooks/v3-php-sdk": "^5.3"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
